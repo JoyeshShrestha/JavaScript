@@ -1,0 +1,47 @@
+<!-- Count the occurrences of distinct elements in the given 2D array. The given input is an array, the elements of which are arrays of strings. The result is an object whose property names are the values from the arrays and their value is the number of their occurrences. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 5</title>
+</head>
+<body>
+    <h2>Count the occurrences of distinct elements in the given 2D array. The given input is an array, the elements of which are arrays of strings. The result is an object whose property names are the values from the arrays and their value is the number of their occurrences.
+    </h2>
+
+    <h2>const input = [ ['a', 'b', 'c'], ['c', 'd', 'f'], ['d', 'f', 'g'], ];</h2>
+    <p id="result"></p>
+</body>
+<script>
+const input = [ ['a', 'b', 'c'], ['c', 'd', 'f'], ['d', 'f', 'g'], ];
+  let properties =[];
+  let text = "";
+  for (let i = 0; i < input.length; i++) {
+    
+    for(let j=0; j<input.length;j++){
+    properties.push(input[i][j]);
+    }
+    
+}
+const elements = new Object();
+for (let index = 0; index < properties.length; index++) {
+    let sum=1;
+    var ele = properties[index];
+    for (let index2 = index + 1; index2 < properties.length; index2++){
+        if(ele == properties[index2]){
+            sum++;
+            properties.splice(index2, index2);
+        }
+    }  
+    elements.letter = ele;
+    elements.occurence = sum;
+    
+    text+=`{letter : ${elements.letter},
+    occurence : ${elements.occurence} }<br>`;
+   
+    }
+    
+    document.getElementById("result").innerHTML=text;
+</script>
+</html>
