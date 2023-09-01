@@ -1,0 +1,60 @@
+<!-- Calculate the mean and median values of the number elements from the input array. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <h2>Calculate the mean and median values of the number elements from the input array.</h2>
+    <h2>Input  = [12, 46, 32, 64]</h2>
+    <span>
+    <h2>Mean</h2>    
+    <p id="mean"></p>
+    
+    <h2>Median</h2>    
+    <p id="median"></p>
+
+    </span>
+</body>
+<script>
+    const input  = [12, 46, 32, 64];
+    let sum = 0;
+     input.forEach(sumTotal);
+    function sumTotal(value) {
+         sum+= value ;
+        }
+    let length=input.length;
+    let mean = sum/length;
+    let mid, median;
+    document.getElementById("mean").innerHTML=mean;
+    
+    const ascInput = input.sort();
+        let arrayNumber = length % 2;
+    if( arrayNumber == 0){
+        console.log("even");
+        evenMedian(ascInput);
+    }else{
+        console.log("odd");
+
+        oddMedian(ascInput);
+    }
+    function evenMedian(ascInput){
+        let first = input[length/2];
+        let second = input[(length/2)+1];
+        median = (first + second)/2;
+
+    }
+    
+    function oddMedian(ascInput){
+        mid = length/2;
+        median = input[Math.round(mid)];
+
+}
+    document.getElementById("median").innerHTML=median;
+
+</script>
+</html>
