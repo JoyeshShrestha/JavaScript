@@ -1,0 +1,42 @@
+<!-- Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 3</title>
+</head>
+<body>
+    <h2>Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.</h2>
+    <h2>const input = [ { name: 'John', age: 13 }, { name: 'Mark', age: 56, }, { name: 'Rachel', age: 45, }, { name: 'Nate', age: 67, }, { name: 'Jeniffer', age: 65, } ];</h2>
+    <span>
+    
+
+    Youngest: <p id="young"></p>
+    Oldest: <p id="old"></p>
+    difference: <p id="diff"></p>
+     
+
+
+    </span>
+</body>
+<script>
+  const input = [ { name: 'John', age: 13 }, { name: 'Mark', age: 56, }, { name: 'Rachel', age: 45, }, { name: 'Nate', age: 67, }, { name: 'Jeniffer', age: 65, } ];
+   let ageArray = [];
+for(let i = 0 ; i<input.length; i++){
+    ageArray.push(input[i].age);
+
+}
+sortedAge=ageArray.sort();
+let youngest = sortedAge[0];
+let oldest = sortedAge[sortedAge.length-1];
+
+document.getElementById("young").innerHTML=youngest;
+document.getElementById("old").innerHTML=oldest;
+document.getElementById("diff").innerHTML=oldest-youngest;
+
+
+</script>
+
+</body>
+</html>
