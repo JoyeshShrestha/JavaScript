@@ -1,0 +1,44 @@
+<html>
+    
+<head></head>
+<body>
+   
+
+<br><br><br>
+    <h3>Exercise 9: make a function that takes an unkown number of arguments of any type and adds them in an array and returns the array, if the argument is an array it should add it's values to the array that will be returned by the function</h3>
+
+    <h1>
+        Output:
+    </h1>
+    <p id="output"></p>
+</body>
+<script>
+    let sum = 0;
+    let newArray=[];
+    let addArray=(...numbers)=>{
+        
+        numbers.map(number=>{
+            console.log(number);
+            if(typeof(number) =="object"){
+            number.map(num=>{
+            sum+=num;
+            console.log("true");
+
+            });
+            newArray.push(sum);
+
+        
+        }else{
+            newArray.push(number);
+
+            }
+            console.log("new:"+newArray);
+        return newArray;
+    })
+    };
+    
+        addArray(1,2,[2,2],2);
+   console.log(newArray);
+    document.getElementById("output").innerHTML=newArray;
+</script>
+    </html>
