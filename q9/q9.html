@@ -1,0 +1,32 @@
+<!-- Write a JavaScript program to check if a given string is upper case or not -->
+
+
+
+<html>
+    
+<head></head>
+<body>
+   
+
+<br><br><br>
+    <h3>Write a JavaScript program to check if a given string is upper case or not</h3>
+
+    <h1>
+        Output:
+    </h1>
+    <p id="output"></p>
+</body>
+<script>
+        let checkJson=(text)=>{
+            let upptext = text.toUpperCase();
+            console.log(upptext);
+            if (text==upptext){
+                return "All is uppercase";
+            }else{
+                return "not uppercase";
+            }
+        }
+
+    document.getElementById("output").innerHTML=checkJson("Hello");
+</script>
+    </html>
