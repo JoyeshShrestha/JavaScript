@@ -1,0 +1,42 @@
+body{
+    
+}
+
+#red{
+    background: #ffa500;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    border: 25px solid red  ;
+    z-index: -1;
+display : flex;
+/* horizantal */
+justify-content: center;
+/* vertical */
+align-items: center;
+box-sizing: border-box;
+
+}
+#mid{
+    background: #008000;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 25px solid #ffff00  ;
+    z-index: 0;
+    position:absolute;
+
+}
+
+#front{
+    background: #800080;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 25px solid #0000ff  ;
+    z-index: 1;
+    position:absolute;
+
+    
+
+}
