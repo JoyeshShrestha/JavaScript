@@ -1,0 +1,27 @@
+<!-- //Exercise 10: distructure the property street in a variable named street from the object person -->
+
+
+<html>
+    
+<head></head>
+<body>
+   
+
+<br><br><br>
+    <h3>Exercise 10: distructure the property street in a variable named street from the object person</h3>
+
+    <h1>
+        Output:
+    </h1>
+    <p id="output"></p>
+</body>
+<script>
+    const person = { name: "Costas", address: { street: "Lalaland 12" } };
+
+
+    const {address:{street}} = person;
+
+
+    document.getElementById("output").innerHTML=street;
+</script>
+    </html>
