@@ -1,0 +1,31 @@
+<!-- //Exercise 10: distructure the property street in a variable named street from the object person -->
+
+
+<html>
+    
+<head></head>
+<body>
+   
+
+<br><br><br>
+    <h3>Write a JavaScript program to check if the provided argument is a valid JSON.</h3>
+
+    <h1>
+        Output:
+    </h1>
+    <p id="output"></p>
+</body>
+<script>
+        let checkJson=(text)=>{
+            console.log(text);
+            
+            try{JSON.parse(text)
+                return "this is a json ";
+            }catch (e){
+                return "this is not json";
+            }
+        }
+
+    document.getElementById("output").innerHTML=checkJson('{ "name": "Company One", "category": "Finance", "start": "1981", "end": "2004" }');
+</script>
+    </html>
