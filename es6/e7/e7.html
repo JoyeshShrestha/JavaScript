@@ -1,0 +1,27 @@
+<html>
+    
+<head></head>
+<body>
+    <h2>const companies = [ { name: "Company One", category: "Finance", start: 1981, end: 2004 }, { name: "Company Two", category: "Retail", start: 1992, end: 2008 }, { name: "Company Three", category: "Auto", start: 1999, end: 2007 }, { name: "Company Four", category: "Retail", start: 1989, end: 2010 }, { name: "Company Five", category: "Technology", start: 2009, end: 2014 }, { name: "Company Six", category: "Finance", start: 1987, end: 2010 }, { name: "Company Seven", category: "Auto", start: 1986, end: 1996 }, { name: "Company Eight", category: "Technology", start: 2011, end: 2016 }, { name: "Company Nine", category: "Retail", start: 1981, end: 1989 } ];</h2>
+    <h2>const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];</h2>
+    <h2>const person = { name: "Costas", address: { street: "Lalaland 12" } };</h2>
+
+<br><br><br>
+    <h3>Exercise 7: make an new object that has the properties of name and category same as the companies[0] and a method print that prints out the name, use object destructuring and ES6 JS</h3>
+
+    <h1>
+        Output:
+    </h1>
+    <p id="output"></p>
+</body>
+<script>
+    const companies = [ { name: "Company One", category: "Finance", start: 1981, end: 2004 }, { name: "Company Two", category: "Retail", start: 1992, end: 2008 }, { name: "Company Three", category: "Auto", start: 1999, end: 2007 }, { name: "Company Four", category: "Retail", start: 1989, end: 2010 }, { name: "Company Five", category: "Technology", start: 2009, end: 2014 }, { name: "Company Six", category: "Finance", start: 1987, end: 2010 }, { name: "Company Seven", category: "Auto", start: 1986, end: 1996 }, { name: "Company Eight", category: "Technology", start: 2011, end: 2016 }, { name: "Company Nine", category: "Retail", start: 1981, end: 1989 } ];
+    const nCompany = {name:"", category:" ",print(){return this.name}};
+    [nCompany.name,nCompany.category] = [companies[0].name,companies[0].category];
+    
+    
+        
+   
+    document.getElementById("output").innerHTML=nCompany.print();
+</script>
+    </html>
