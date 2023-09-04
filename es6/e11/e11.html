@@ -1,0 +1,35 @@
+<!-- //Exercise 10: distructure the property street in a variable named street from the object person -->
+
+
+<html>
+    
+<head></head>
+<body>
+   
+
+<br><br><br>
+    <h3>Exercise 11: write a function that everytime you call it, it returns a number that increments starting from 0</h3>
+
+    <h1>
+        Output:
+    </h1>
+    <p id="output"></p>
+</body>
+<script>
+        let arra = [];
+        console.log("arra");
+    
+    let a = ()=>{
+        
+        let number = Math.floor(Math.random()*10);
+        for (let index = 0; index < number; index++) {
+            arra.push(index);
+            
+        }
+        console.log(arra);
+        return arra;
+    }
+
+    document.getElementById("output").innerHTML=a();
+</script>
+    </html>
