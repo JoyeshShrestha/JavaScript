@@ -1,0 +1,43 @@
+<!-- //Exercise 10: distructure the property street in a variable named street from the object person -->
+
+
+<html>
+    
+<head></head>
+<body>
+   
+
+<br><br><br>
+    <h3>Exercise 12: create a function that distructures the query parameters of a url and adds them in an object as key value pairs and then returns the object</h3>
+
+    <h1>
+        Output:
+    </h1>
+    <p id="output"></p>
+</body>
+<script>
+        let newObj = {};
+        
+    let a = (url)=>{
+        let cut = url.split("?");
+        let mainparts=cut[1];
+        let keys= mainparts.split("&");
+        let key, value;
+        console.log(keys.length);
+for (let index = 0; index < keys.length; index++) {
+
+            
+        key = keys[index].split("=")[0];
+        console.log(key);
+
+        value = keys[index].split("=")[1];
+        newObj[key] = value;
+
+        }
+        console.log();
+         return newObj;
+    }
+
+    document.getElementById("output").innerHTML=JSON.stringify(a("www.facebook.com?name=j&place=s"));
+</script>
+    </html>
